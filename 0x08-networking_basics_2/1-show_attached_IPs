@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays all acive IPv4 addresses on the machine.
+
+# An alternative way of using ifconfig
+
+
+ip -4 -o addr show | awk '{print $4}' | cut -d "/" -f 1
+
